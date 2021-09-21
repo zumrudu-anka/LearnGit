@@ -185,6 +185,7 @@ Komutunu verdiğimizde localimizde tagı güncellemiş oluruz.
 ```git push --force --tags```
 
 Komutunu verince de uzaktaki depodaki tagı güncellemiş oluruz.
+
 ## Branch
 
 ### Yeni branch olusturma
@@ -252,13 +253,23 @@ Komutunu vererek iki branchı birleştirdik.
 
 Birleştirdiğimiz branchları uzakdaki repoya pushladık.
 
-### Branch ismi değiştirme 
+### Branch ismi değiştirme
+
+```git branch -m <branch_adı>```
+
+Komutu ile aktif olan branchimizin adını değiştirdik.
 
 ```git branch -m <branch_adı> <yeni_branch_adı>```
 
 Komutu ile localde branchımızın adını değiştirdik.
 
 ```git push <remote> :<eski_branch_adı> <yeni_branch_adı>```
+
+### Branch İzleme(Tracking)
+
+```git branch --track localdekiBranch remoteBranch```
+
+Komutu ile localimizdeki bir branchin uzaktaki branchi izlemesini sağladık.
 
 ## Reset
 
@@ -319,6 +330,10 @@ Komutunu verdiğimizde localde son yaptığımız commiti geri alır ama değiş
 ### Commitleri id ve mesaj olarak gösterme 
 
  ```git log --pretty=oneline ```
+ 
+ ### Branch'leri karşılaştırma
+ 
+ ```git log branch1..branch2```
 
 ## Pull
 
